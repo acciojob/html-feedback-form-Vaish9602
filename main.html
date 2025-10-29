@@ -1,16 +1,74 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      width: 350px;
+      margin: 0 auto;
+      border: 1px solid #000;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    input[type="color"],
+    input[type="range"] {
+      width: 50%;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <!-- the entire body must be written by student -->
 
+  <h2>Feedback Form</h2>
+  
+  <form method="post">
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
+
+    <!-- Portfolio -->
+    <label for="portfolio">Portfolio:</label>
+    <input type="url" id="portfolio" name="portfolio" required>
+
+    <!-- Favorite Color -->
+    <label for="favColor">Favorite Color:</label>
+    <input type="color" id="favColor" name="favColor">
+
+    <!-- Likeness -->
+    <label for="likeness">Likeness:</label>
+    <input type="range" id="likeness" name="likeness" min="1" max="100">
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+
+  <script type="text/javascript" src="./script.js"></script>
 </body>
-
 </html>
